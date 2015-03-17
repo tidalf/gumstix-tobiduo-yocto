@@ -7,7 +7,6 @@
   <remote name="yocto" fetch="git://git.yoctoproject.org" />
   <remote name="oe" fetch="git://git.openembedded.org" />
   <remote name="bmwcarit" fetch="git://github.com/bmwcarit" />
-  <remote name="tidalf" fetch="git://github.com/tidalf" />
 
   <!-- List all the repositories you want to fetch -->
   <!-- "name": git repository's name on hosting server
@@ -19,7 +18,7 @@
   <project name="meta-gumstix" revision="refs/heads/dizzy"  remote="gumstix" path="poky/meta-gumstix" />
   <project name="meta-gumstix-extras" revision="refs/heads/dizzy" remote="gumstix" path="poky/meta-gumstix-extras" />
   <project name="meta-ti" revision="refs/heads/master"  remote="yocto" path="poky/meta-ti" />
-  <project name="meta-ghostbox" revision="refs/heads/master"  remote="tidalf" path="poky/meta-ghostbox" />
+  <project name="meta-cloud-services" revision="refs/heads/master"  remote="yocto" path="poky/meta-cloud-services" />
   <project name="meta-ros" revision="refs/heads/master"  remote="bmwcarit" path="poky/meta-ros" />
 
 </manifest>
