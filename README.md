@@ -50,7 +50,7 @@ Create an empty directory to hold your working files:
 
 Tell Repo where to find the manifest:
 
-    $ repo init -u git://github.com/tidalf/ghostbox-gumstix-tobiduo.git 
+    $ repo init -u git://github.com/tidalf/gumstix-tobiduo-yocto.git 
 
 A successful initialization will end with a message stating that Repo is
 initialized in your working directory. Your directory should now
@@ -67,28 +67,9 @@ The **-m** switch selects the manifest file (default is *default.xml*).
 Our default.xml on **master** is designed to be stable as it *pins*
 particular commits.
 
-To test out the bleeding edge, type:
-
-    $ repo init -u git://github.com/tidalf/ghostbox-gumstix-tobiduo.git -b dev
+    $ repo init -u git://github.com/tidalf/gumstix-tobiduo-yocto.git -b master
     $ repo sync
 
-To get back to the known stable version, type:
-
-    $ repo init -u git://github.com/tidalf/ghostbox-gumstix-tobiduo.git -b master
-    $ repo sync
-
-Also you can get a specific version of Yocto Project:
-
-For example,
-
-    $ repo init -u git://github.com/tidalf/ghostbox-gumstix-tobiduo.git -b refs/tags/danny
-    
-To learn more about repo, look at http://source.android.com/source/version-control.html 
-***
-
-**3.  Fetch all the repositories:**
-
-    $ repo sync
 
 Now go turn on the coffee machine as this may take 20 minutes depending on
 your connection.
@@ -149,7 +130,7 @@ Go to the deploy directory as mentioned in step 5:
 Write the bootloader, kernel and the root file system into your card:
 
     $ cp MLO u-boot.img /media/boot
-    $ sudo tar xaf ghostbox-overo-image.tar.bz2 -C /media/rootfs --strip-components=1
+    $ sudo tar xaf console-image-overo.tar.bz2 -C /media/rootfs --strip-components=1
 
 Note that in Gumstix Yocto Project 1.7, you no longer have to copy the kernel image into `/media/boot`.
 A kernel image (zImage) is included in the root file system.
@@ -218,7 +199,7 @@ repositories and branches or pull in additional meta-layers.
 
 Clone this repository (or fork it on github):
 
-    $ git clone git://github.com/tidalf/ghostbox-gumstix-tobiduo.git
+    $ git clone git://github.com/tidalf/gumstix-tobiduo-yocto.git
 
 Make your changes (and contribute them back if they are generally useful), and
 then re-initialize your repo client
